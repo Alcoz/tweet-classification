@@ -23,9 +23,9 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 import re
-nltk.download('averaged_perceptron_tagger')
-nltk.download('stopwords')
-nltk.download('wordnet')
+#nltk.download('averaged_perceptron_tagger')
+#nltk.download('stopwords')
+#nltk.download('wordnet')
 
 tk = TweetTokenizer()
 lemmatizer = WordNetLemmatizer()
