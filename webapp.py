@@ -22,9 +22,9 @@ def get_label(value):
     elif value == 4:
         return "Positive"
     
-model = torch.load("models/neuralnetwork.pth").to("cpu")
+model = torch.load("models/neuralnetwork.pth")
 
 tweet = st.text_input("Enter your tweet")
 label = model(vec(tweet))
 l = label.squeeze().argmax().cpu().numpy()
-st.text_input(get_label(l))
+st.write(get_label(l))
