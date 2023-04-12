@@ -23,9 +23,9 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 import re
-#nltk.download('averaged_perceptron_tagger')
-#nltk.download('stopwords')
-#nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 tk = TweetTokenizer()
 lemmatizer = WordNetLemmatizer()
@@ -77,5 +77,5 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 def vec(tweet):
     vectorized_tweet = vectorizer.transform([tweet])
     return torch.Tensor(vectorized_tweet.toarray()).to(torch.float64).to(device)
-    
+
     
